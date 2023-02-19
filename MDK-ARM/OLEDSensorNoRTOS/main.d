@@ -30,3 +30,4 @@ oledsensornortos\main.o: C:/Users/huyho/Downloads/oled/oled/Inc/fonts.h
 oledsensornortos\main.o: E:\KeilC\ARM\ARMCC\Bin\..\include\string.h
 oledsensornortos\main.o: C:/Users/huyho/Downloads/oled/oled/Inc/ssd1306.h
 oledsensornortos\main.o: E:\KeilC\ARM\ARMCC\Bin\..\include\stdlib.h
+oledsensornortos\main.o: E:\KeilC\ARM\ARMCC\Bin\..\include\stdio.h

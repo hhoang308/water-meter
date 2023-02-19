@@ -18,16 +18,17 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "fonts.h"
 #include "ssd1306.h"
+#include "stdio.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+float flow;
+char bufferflow[20];
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -90,10 +91,9 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
 	SSD1306_Init();
-	SSD1306_GotoXY(0,0);
-	SSD1306_Puts("Hello World!", &Font_11x18, 1);
-	SSD1306_UpdateScreen();
-	HAL_Delay(2000);
+	// SSD1306_Puts("Hello World!", &Font_11x18, 1);
+	// SSD1306_UpdateScreen();
+	// HAL_Delay(2000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -101,7 +101,10 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+		SSD1306_GotoXY(0,0);
+		sprintf(bufferflow, "Speed:%2.1f", flow);
+		SSD1306_Puts(bufferflow, &Font_11x18, 1);
+		SSD1306_UpdateScreen();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

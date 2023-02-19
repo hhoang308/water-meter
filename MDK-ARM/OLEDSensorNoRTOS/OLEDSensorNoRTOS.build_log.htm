@@ -27,15 +27,14 @@ Project File Date:  02/19/2023
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'E:\KeilC\ARM\ARMCC\Bin'
 Build target 'OLEDSensorNoRTOS'
-assembling startup_stm32f103xb.s...
 compiling main.c...
 C:/Users/huyho/Downloads/oled/oled/Inc/ssd1306.h(238): warning:  #1295-D: Deprecated declaration ssd1306_I2C_Init - give arg types
   void ssd1306_I2C_Init();
-../Src/main.c(94): warning:  #188-D: enumerated type mixed with another type
-  	SSD1306_Puts("Hello World!", &Font_11x18, 1);
+../Src/main.c(106): warning:  #188-D: enumerated type mixed with another type
+  		SSD1306_Puts(bufferflow, &Font_11x18, 1);
 ../Src/main.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=5676 RO-data=3712 RW-data=32 ZI-data=2744  
+Program Size: Code=11564 RO-data=3888 RW-data=44 ZI-data=2764  
 FromELF: creating hex file...
 "OLEDSensorNoRTOS\OLEDSensorNoRTOS.axf" - 0 Error(s), 2 Warning(s).
 
