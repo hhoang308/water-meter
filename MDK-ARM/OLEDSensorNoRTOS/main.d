@@ -26,6 +26,8 @@ oledsensornortos\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash
 oledsensornortos\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 oledsensornortos\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h
 oledsensornortos\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+oledsensornortos\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+oledsensornortos\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 oledsensornortos\main.o: C:/Users/huyho/Downloads/oled/oled/Inc/fonts.h
 oledsensornortos\main.o: E:\KeilC\ARM\ARMCC\Bin\..\include\string.h
 oledsensornortos\main.o: C:/Users/huyho/Downloads/oled/oled/Inc/ssd1306.h
