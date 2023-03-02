@@ -189,7 +189,7 @@ void SysTick_Handler(void)
 	i++;
 	if(i == 100)
 	{
-		flow = pulse * 2.25 * 60 / 1000;
+		flow = (pulse * 10) * 7.5 / (60 * 60) ; //pulse * 10 = frequency, 7.5 is a parameter number based on datasheet, lit/hour to lit/second
 		i = 0;
 		pulse = 0;
 	}

@@ -110,8 +110,8 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   MX_TIM2_Init();
-	HAL_TIM_Base_Start_IT(&htim2);
   /* USER CODE BEGIN 2 */
+	HAL_TIM_Base_Start_IT(&htim2);
 	SSD1306_Init();
 	// SSD1306_Puts("Hello World!", &Font_11x18, 1);
 	// SSD1306_UpdateScreen();
