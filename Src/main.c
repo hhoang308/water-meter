@@ -87,10 +87,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
   /* Prevent unused argument(s) compilation warning */
-  UNUSED(hadc);
+  // UNUSED(hadc);
 	if(hadc->Instance == ADC1){
 		u16_ADCVal = HAL_ADC_GetValue(&hadc1);
-		voltage = (float)u16_ADCVal/4095*3.3;
+		voltage = ((float) u16_ADCVal/4095)*3.3;
 	}
   /* NOTE : This function should not be modified. When the callback is needed,
             function HAL_ADC_ConvCpltCallback must be implemented in the user file.
@@ -132,7 +132,7 @@ int main(void)
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
 	HAL_TIM_Base_Start_IT(&htim2);
-	HAL_ADC_Start_IT(&hadc1);
+	// HAL_ADC_Start_IT(&hadc1);
 	SSD1306_Init();
 	// SSD1306_Puts("Hello World!", &Font_11x18, 1);
 	// SSD1306_UpdateScreen();
@@ -144,10 +144,11 @@ int main(void)
   while (1)
   {
 		SSD1306_GotoXY(0,0);
-    sprintf(bufferflow, "Speed:%2.1f", flow);
+    sprintf(bufferflow, "SV:%2.1f %2.1f ", flow, volume);
 		SSD1306_Puts(bufferflow, &Font_11x18, 1);
 		SSD1306_GotoXY(0,32);
-		sprintf(bufferflow, "Volume:%2.1f", volume);
+		HAL_ADC_Start_IT(&hadc1);
+		sprintf(bufferflow, "ADC: %2.1f", voltage);
 		SSD1306_Puts(bufferflow, &Font_11x18, 1);
 		SSD1306_UpdateScreen();
 		HAL_Delay(500);
